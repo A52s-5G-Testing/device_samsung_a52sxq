@@ -14,7 +14,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/genoxci-dev/Updater_OTA/main/a52sxq.json</string>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/genoxci-dev/Updater_OTA/main/a52sxq_16qpr2.json</string>
     <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/genoxci-dev/Updater_OTA/main/a52sxq_changelog.txt</string>
 
 </resources>
