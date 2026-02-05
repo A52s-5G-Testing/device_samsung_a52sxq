@@ -25,19 +25,25 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common Lineage stuff
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+# Axion flags
+AXION_MAINTAINER := Genoxci
+AXION_PROCESSOR := Snapdragon®_778G_5G
+AXION_CAMERA_FRONT_INFO := 32
+AXION_CAMERA_REAR_INFO := 64,12,5
+TARGET_ENABLE_BLUR := true
 
-# NFC
-TARGET_HAVE_SEC_NFC := true
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
 
-## Device identifier. This must come after all inclusions
+# Device identifier
 PRODUCT_NAME := lineage_a52sxq
 PRODUCT_DEVICE := a52sxq
 PRODUCT_BRAND := samsung
