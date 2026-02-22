@@ -33,6 +33,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
     $(LOCAL_PATH)/configs/audio/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
 
+# Extras
+$(call inherit-product-if-exists, packages/apps/Extras/extras.mk)
+
 # Remove Packages
 PRODUCT_PACKAGES += \
     RemovePackages
